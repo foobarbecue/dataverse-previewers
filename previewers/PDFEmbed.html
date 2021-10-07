@@ -3,13 +3,13 @@
 <meta charset="utf-8">
 </head>
 <body class="container">
+</body>
 <script>
     const fileId = window.location.search.match(/fileid=(.*?)[&$]/)[1]
     const siteUrl = window.location.search.match(/siteUrl=(.*?)[&$]/)[1]
-    const fileURL = `${siteUrl}/api/access/datafile/${fileId}` 
+    const fileURL = `${siteUrl}/api/access/datafile/${fileId}`
     embedTag = document.createElement('embed')
-    embedTag.src = fileURL 
-    document.body.appendChild(embedTag)    
+    embedTag.src = fileURL
+    document.body.appendChild(embedTag)
 </script>
-</body>
 </html>
