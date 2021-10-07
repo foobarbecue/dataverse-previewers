@@ -10,6 +10,7 @@
     const fileURL = `${siteUrl}/api/access/datafile/${fileId}`
     embedTag = document.createElement('embed')
     embedTag.src = fileURL
+    embedTag.type = 'application/pdf'
     document.body.appendChild(embedTag)
 </script>
 </html>
