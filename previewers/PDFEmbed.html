@@ -5,7 +5,6 @@
 <body class="container">
 <script>
     const fileId = window.location.search.match(/fileid=(.*?)[&$]/)[1]
-    const key = window.location.search.match(/key=(.*?)[&$]/)[1]
     const siteUrl = window.location.search.match(/siteUrl=(.*?)[&$]/)[1]
     const fileURL = `${siteUrl}/api/access/datafile/${fileId}` 
     embedTag = document.createElement('embed')
