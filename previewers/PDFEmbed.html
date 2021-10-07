@@ -4,9 +4,10 @@
 </head>
 <body class="container">
 <script>
-    const fileId = window.location.search.match(/fileid=(.*?)[&/]/)[1]
-    const key = window.location.search.match(/key=(.*?)[&/]/)[1]
-    const fileURL = `https://dataverse.jpl.nasa.gov/file.xhtml?fileId=${fileId}` 
+    const fileId = window.location.search.match(/fileid=(.*?)[&$]/)[1]
+    const key = window.location.search.match(/key=(.*?)[&$]/)[1]
+    const siteUrl = window.location.search.match(/siteUrl=(.*?)[&$]/)[1]
+    const fileURL = `${siteUrl}/api/access/datafile/${fileId}` 
     embedTag = document.createElement('embed')
     embedTag.src = fileURL 
     document.body.appendChild(embedTag)    
