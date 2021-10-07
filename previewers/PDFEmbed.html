@@ -4,7 +4,11 @@
 </head>
 <body class="container">
 <script>
-  document.body.innerText = window.location
+    const fileId = window.location.search.match(/fileid=(.*?)[&/]/)[1]
+    const fileURL = `https://dataverse.jpl.nasa.gov/file.xhtml?fileId=${fileId}` 
+    embedTag = document.createElement('embed')
+    embedTag.src = fileURL 
+    document.body.appendChild(embedTag)    
 </script>
 </body>
 </html>
